@@ -113,15 +113,17 @@
   flex-wrap: wrap;
 
 }
-footer {
+footer > div{
   display: flex !important;
+  flex-wrap: wrap !important;
   width: 100% !important;
   align-items: center !important;
   justify-content: space-between !important;
   position: fixed;
   bottom: 0;
-  padding: 20px 20px;
+  padding: 10px;
   font-size: 10px !important;
+  z-index: 500 !important;
 }
 </style>
 
@@ -673,12 +675,14 @@ footer {
   <div class="background" style="background-image:url(assets/img/background/img-85.jpg)"></div>
 </section>
 
-<footer class="panel bottom">
-  <div class="left-footer">
-    All Right Reserved, TM 2020 by Mithibai Finanza
-  </div>
-  <div class="right-footer">
-    <span>Designed By <a target="_blank" href="https://rishabhnahar.onrender.com/">Rishabh Nahar</a></span>
+<footer class="bottom">
+  <div>
+      <div class="left-footer">
+        All Right Reserved, TM 2020 by Mithibai Finanza
+      </div>
+      <div class="right-footer">
+        <span>Designed By <a href="https://rishabhnahar.onrender.com/" target="_blank">Rishabh Nahar</a></span>
+    </div>
   </div>
 </footer>
 
