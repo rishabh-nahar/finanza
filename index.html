@@ -28,7 +28,12 @@
   <link rel="icon" href="./assets/img/logo/logo_icon.png" type="image/png" sizes="16x16">
  
 <style>
-
+#main_home{
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
 .events img{
   border-radius: 5px !important;
   width: 100%;
@@ -51,9 +56,35 @@
   justify-content: center;
   align-items: center;
 }
-#sponsors .img-container img{
+
+#sponsors .all-sponsors{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+#sponsors .all-sponsors>div{
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.343);
+  border-radius: 5px;
+  padding:5px;
+}
+#sponsors .all-sponsors img{
   object-fit: contain;
-  width: 100%;
+  height: 100%;
+  background: transparent !important;
+}
+#committee .core-comm{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 20px;
+  min-height: 200px;
+}
+#committee .core-comm span{
+  background-color: white;
+  border-radius: 5px;
+  align-self: stretch;
 }
 #committee .cm{
   display: flex;
@@ -61,15 +92,9 @@
 }
 #committee .cm img{
   object-fit: cover;
-  height: 200px;
+  height: 150px;
   width: 200px;
-  border-radius: 40%;
-}
-#committee .vcm img{
-  object-fit: cover;
-  height: 200px;
-  width: 200px;
-  border-radius: 40%;
+  border-radius: 50%;
 }
 
 #committee .hod-containers{
@@ -80,10 +105,10 @@
   align-items: center;
 }
 #committee .hods{
-  background-color: white;
-  color: #202020;
+  background-color: rgba(14, 14, 14, 0.273);
+  color: rgba(255, 255, 255, 0.817);
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   height: 100%;
 }
 .reg-links{
@@ -98,11 +123,11 @@
   #committee .cm{
     display: block;
   }
-  #committee .hod-containers{
+  #sponsors .all-sponsors {
     grid-template-columns: repeat(2,1fr);
   }
-  #sponsors .img-container{
-    grid-template-columns: repeat(2,1fr);
+  #committee .hod-containers{
+    grid-template-columns: 50% 50%;
   }
   .reg-links a{
     width: 100%;
@@ -125,6 +150,7 @@ footer > div{
   font-size: 10px !important;
   z-index: 500 !important;
 }
+
 </style>
 
 </head>
@@ -198,7 +224,12 @@ footer > div{
   <symbol id="youtube" viewBox="0 0 24 24"><path d="M23.6 6.3c-.3-1.2-1.4-2.2-2.6-2.3-3-.3-6-.3-9-.3s-6 0-9 .3c-1.2.1-2.3 1.1-2.6 2.3-.4 1.8-.4 3.8-.4 5.7 0 1.9 0 3.9.4 5.7.3 1.2 1.4 2.2 2.6 2.3 3 .3 6 .3 9 .3s6 0 9-.3c1.3-.1 2.3-1.1 2.6-2.4.4-1.7.4-3.7.4-5.6 0-1.9 0-3.9-.4-5.7zm-14.1 9v-6.6l6.5 3.3-6.5 3.3z"/></symbol>
 
 </svg>
-
+<!-- Navigation -->
+<nav class="side pole">
+  <div class="navigation">
+    <ul></ul>
+  </div>
+</nav>
 <!-- Panel Top #08 -->
 <nav class="panel top">
   <div class="sections desktop">
@@ -279,7 +310,7 @@ footer > div{
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/img/background/img-09.jpg)"></div>
+  <div class="background" style="background-image:url(assets/video/bg.gif); background-position: center;"></div>
 </section>
 
 <!-- Popup Video -->
@@ -361,7 +392,7 @@ footer > div{
 
             <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
               <div class="pad" style="background: #F5FBFE">
-                <h3>Mock Stock (Finanza Markets)</h3>
+                <h3>Mock Stock<br>(Finanza Markets)</h3>
                 <img src="./assets/img/stock.png" alt="">
                 <div class="margin-top-3 margin-bottom-3 equalElement ae-6">
                   <ul class="p tiny">
@@ -374,7 +405,7 @@ footer > div{
             </li>
             <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
               <div class="pad" style="background: #F5FBFE">
-                <h3>Fables with Finanza (Talk Show)</h3>
+                <h3>Fables with Finanza<br>(Talk Show)</h3>
                 <img src="./assets/img/vishalbhai.jpg" alt="">
                 <div class="margin-top-3 margin-bottom-3 equalElement ae-6" style="height:auto !important">
                   <ul class="p tiny">
@@ -418,22 +449,20 @@ footer > div{
         <h1 class="ae-1">Sponsors</h1>
 
         <div class="fix-12-12" >
-          <ul class="left row">
-            <li class="col-4-12 bottom img-container">
-              <div><img src="assets/img/mcd.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/starbucks.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/belgian.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/ticker.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/enrich.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/uniball.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/trading.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/hdfc.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/angelone.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/oyo.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/comfort.JPG" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-              <div><img src="assets/img/bob.JPG" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-            </li>
-          </ul>
+            <div class="all-sponsors">
+                <div><img src="assets/img/mcd.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/starbucks.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/belgian.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/ticker.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/enrich.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/uniball.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/trading.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/hdfc.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/angelone.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/oyo.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/comfort.JPG" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/bob.JPG" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+            </div>
         </div>
 
       </div>
@@ -455,9 +484,9 @@ footer > div{
           
           <div class="fix-12-12">
             <h3 class="ae-1 margin-top-3 margin-bottom-3">Core Committee</h3>
-            <ul class="grid equal ae-2 cm m-auto p-24 justify-center">
+            <div class="core-comm equal ae-2 cm m-auto p-24 justify-center">
   
-              <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3 ">
+              <span class="">
                 <div class="pad" style="background: #F5FBFE">
                   <img src="./assets/img/bhavyacropped.jpg" alt="">
                   <div class="margin-top-3 margin-bottom-3 " style="height:auto !important">
@@ -465,21 +494,9 @@ footer > div{
                     <p>Chair Person</p>
                   </div>
                 </div>
-              </li>
-              <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
-                <div class="pad" style="background: #F5FBFE">
-                  <img src="./assets/img/bhavyacropped.jpg" alt="">
-                  <div class="margin-top-3 margin-bottom-3 " style="height:auto !important">
-                    <h3>Mustafa Bhandari</h3>
-                    <p>Chair Person</p>
-                  </div>
-                </div>
-              </li>
+              </span>
   
-            </ul>
-            <ul class="grid grid-85 equal ae-2 fromCenter vcm">
-  
-              <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+              <span class="">
                 <div class="pad" style="background: #F5FBFE">
                   <img src="./assets/img/tarun.jpg" alt="">
                   <div class="margin-top-3 margin-bottom-3 " style="height:auto !important">
@@ -487,181 +504,179 @@ footer > div{
                     <p>Vice Chair Person</p>
                   </div>
                 </div>
-              </li>
-              <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+              </span>
+              <span class="">
                 <div class="pad" style="background: #F5FBFE">
                   <img src="./assets/img/vansh.jpg" alt="">
                   <div class="margin-top-3 margin-bottom-3 " style="height:auto !important">
                     <h3>Hasnain Aghariya</h3>
-                    <p>Vise Chair Person</p>
+                    <p>Vice Chair Person</p>
                   </div>
                 </div>
-              </li>
-              <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+              </span>
+              <span class="">
                 <div class="pad" style="background: #F5FBFE">
                   <img src="./assets/img/shubh.jpg" alt="">
                   <div class="margin-top-3 margin-bottom-3 " style="height:auto !important">
                     <h3>Harshit Jadiya</h3>
-                    <p>Vise Chair Person</p>
+                    <p>Vice Chair Person</p>
                   </div>
                 </div>
-              </li>
-              <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+              </span>
+              <span class="">
                 <div class="pad" style="background: #F5FBFE">
                   <img src="./assets/img/shubh.jpg" alt="">
                   <div class="margin-top-3 margin-bottom-3 " style="height:auto !important">
                     <h3>Harshit Jadiya</h3>
-                    <p>Vise Chair Person</p>
+                    <p>Vice Chair Person</p>
                   </div>
                 </div>
-              </li>
+              </span>
   
   
-            </ul>
+            </div>
           </div> 
 
 
           <div class="">
-              <h3 class="margin-top-3 margin-bottom-3">Head of Departments</h3>
-              
-              <div class="hod-containers">
-    
-                <div class="hods">
-                  <h3>Public Relations</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Digital Media</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Graphics</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>creatives</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-    
-                <div class="hods">
-                  <h3>Talent Management</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Special Projects</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Financial Events</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Marketing </h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-                
-    
-                
-                <div class="hods">
-                  <h3>Informals</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Business and Mgmt Events</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Security </h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Finance</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                
-                <div class="hods">
-                  <h3>Productions</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Hospitality </h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Logistics</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-                <div class="hods">
-                  <h3>Printing and Stationary</h3>
-                  <ul>
-                    <li>Pal Shah</li>
-                    <li>Simran Wagh</li>
-                  </ul>
-                </div>
-    
-    
+            <h3 class="margin-top-3 margin-bottom-3">Head of Departments</h3>
+            
+            <div class="hod-containers">
+  
+              <div class="hods">
+                <h3>Public Relations</h3>
+                <ul>
+                  <li>Pal Shah</li>
+                  <li>Simran Wagh</li>
+                </ul>
               </div>
-          </div>
-
+  
+              <div class="hods">
+                <h3>Digital Media</h3>
+                <ul>
+                  <li>Kartik Shah</li>
+                  <li>Hiti Padia</li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Graphics</h3>
+                <ul>
+                  <li>Archi Dhakan</li>
+                  <li>Aditi Gupta</li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>creatives</h3>
+                <ul>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+  
+  
+              <div class="hods">
+                <h3>Talent Management</h3>
+                <ul>
+                  <li>Aashi Verma</li>
+                  <li>Bhaavika Ahuja</li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Special Projects</h3>
+                <ul>
+                  <li>Nihaal Vira</li>
+                  <li></li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Financial Events</h3>
+                <ul>
+                  <li>Gautam Mehta</li>
+                  <li>Harsh Shah</li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Marketing </h3>
+                <ul>
+                  <li>Krina Maniar</li>
+                  <li>Nehanshi Nagda</li>
+                </ul>
+              </div>
+              
+  
+              
+              <div class="hods">
+                <h3>Informals</h3>
+                <ul>
+                  <li>Manasvi Saxena</li>
+                  <li>Purva Agrawal </li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Business and Mgmt Events</h3>
+                <ul>
+                  <li>Krishna Rawat</li>
+                  <li>Gaurij Choudhari</li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Security </h3>
+                <ul>
+                  <li>Drishti Thakkar</li>
+                  <li>Prateek</li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Finance</h3>
+                <ul>
+                  <li>Gaurav Saboo</li>
+                </ul>
+              </div>
+  
+              
+              <div class="hods">
+                <h3>Productions</h3>
+                <ul>
+                  <li>Mahat Mehta</li>
+                  <li>Siddhant Agrawal</li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Hospitality </h3>
+                <ul>
+                  <li>Soumit Desai</li>
+                  <li>Vaacha Shah</li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Logistics</h3>
+                <ul>
+                  <li>Deep Shah</li>
+                  <li>Bhavesh Dalmiya</li>
+                </ul>
+              </div>
+  
+              <div class="hods">
+                <h3>Printing and Stationary</h3>
+                <ul>
+                  <li>Raadhey Lalpuria</li>
+                  <li>Simran Wagh</li>
+                </ul>
+              </div>
+  
+  
+            </div>
+        </div>
 
 
         </div>
