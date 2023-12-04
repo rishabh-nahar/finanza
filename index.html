@@ -43,37 +43,103 @@
   object-fit: cover;
 }
 
-#sponsors .img-container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  align-items: center;
-}
-#sponsors .img-container>div{
-  background-color: white;
-  border-radius: 5px;
-  height: 100%;
-  width: 100%;
+.events .event-cards{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  gap: 5px;
 }
 
+.events .event-cards > span{
+  min-width: 270px;
+}
+
+
+#popup-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
 #sponsors .all-sponsors{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 5px;
 }
 #sponsors .all-sponsors>div{
   height: 120px;
-  background-color: rgba(255, 255, 255, 0.343);
+  width: 100%;
+  /* background-color: rgba(255, 255, 255, 0.343); */
   border-radius: 5px;
-  padding:5px;
+  box-shadow: none !important;
+}
+#sponsors .all-sponsors div:nth-child(1){
+  background-color: #d62c1d;
+}
+#sponsors .all-sponsors div:nth-child(2){
+  background-color: #ffffff;
+}
+
+#sponsors .all-sponsors div:nth-child(3){
+  background-color: #ffffff;
+}
+#sponsors .all-sponsors div:nth-child(4){
+  background-color: #f9bf16;
+}
+#sponsors .all-sponsors div:nth-child(5){
+  background-color: #dc3f2a;
+}
+#sponsors .all-sponsors div:nth-child(6){
+  background-color: #ffffff;
+}
+#sponsors .all-sponsors div:nth-child(7){
+  background-color: #e72d38;
+}
+#sponsors .all-sponsors div:nth-child(8){
+  background-color: #ffffff;
+}
+#sponsors .all-sponsors div:nth-child(9){
+  background-color: #ffffff;
+}
+#sponsors .all-sponsors div:nth-child(10){
+  background-color: #ffffff;
+}
+#sponsors .all-sponsors div:nth-child(11){
+  background-color: #ffffff;
+}
+#sponsors .all-sponsors div:nth-child(12){
+  background-color: #ffffff;
 }
 #sponsors .all-sponsors img{
   object-fit: contain;
   height: 100%;
   background: transparent !important;
+  box-shadow: none !important;
 }
 #committee .core-comm::-webkit-scrollbar {
   height: 5px;           /* width of the entire scrollbar */
@@ -137,9 +203,7 @@
 }
 
 @media (max-width: 720px) {
-  #committee .cm{
-    /* flex-direction: column; */
-  }
+ 
   #sponsors .all-sponsors {
     grid-template-columns: repeat(2,1fr);
   }
@@ -373,17 +437,25 @@ footer > div{
 
 
 
-<!-- Slide 5 (#85) -->
+<!-- Slide 5 Events (#85) -->
 <section class="slide fade-6 kenBurns events" id="events">
+
+  
+  <div id="popup-container">
+    <span id="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Popup Content</h2>
+    <p>This is a simple popup.</p>
+  </div>
+
   <div class="content">
     <div class="container">
       <div class="wrap">
       
         <div class="fix-12-12">
           <h1 class="ae-1">Events</h1>
-          <ul class="grid grid-85 equal ae-2 fromCenter">
+          <div class="event-cards">
 
-            <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
               <div class="pad" style="background: #F5FBFE">
                 <h3>Musical Evening</h3>
                 <img src="./assets/img/musical.png" alt="">
@@ -395,8 +467,8 @@ footer > div{
                   </ul>
                 </div>
               </div>
-            </li>
-            <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+            </span>
+            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
               <div class="pad" style="background: #F5FBFE">
                 <h3>Social Cause</h3>
                 <img src="./assets/img/social.jpeg" alt="">
@@ -408,9 +480,9 @@ footer > div{
                   </ul>
                 </div>
               </div>
-            </li>
+            </span>
 
-            <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
               <div class="pad" style="background: #F5FBFE">
                 <h3>Mock Stock<br>(Finanza Markets)</h3>
                 <img src="./assets/img/stock.png" alt="">
@@ -422,8 +494,8 @@ footer > div{
                   </ul>
                 </div>
               </div>
-            </li>
-            <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+            </span>
+            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
               <div class="pad" style="background: #F5FBFE">
                 <h3>Fables with Finanza<br>(Talk Show)</h3>
                 <img src="./assets/img/vishalbhai.jpg" alt="">
@@ -433,8 +505,8 @@ footer > div{
                   </ul>
                 </div>
               </div>
-            </li>
-            <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+            </span>
+            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
               <div class="pad" style="background: #F5FBFE">
                 <h3>Financial and Entrepreneurial Summits</h3>
                 <img src="./assets/img/summit.png" alt="">
@@ -446,11 +518,11 @@ footer > div{
                   </ul>
                 </div>
               </div>
-            </li>
+            </span>
             
             
 
-          </ul>
+          </div>
         </div> 
         
       </div>
@@ -472,15 +544,15 @@ footer > div{
             <div class="all-sponsors">
                 <div><img src="assets/img/mcd.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
                 <div><img src="assets/img/starbucks.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/comfort.JPG" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
                 <div><img src="assets/img/belgian.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-                <div><img src="assets/img/ticker.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/oyo.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
                 <div><img src="assets/img/enrich.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
                 <div><img src="assets/img/uniball.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
+                <div><img src="assets/img/ticker.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
                 <div><img src="assets/img/trading.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
                 <div><img src="assets/img/hdfc.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
                 <div><img src="assets/img/angelone.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-                <div><img src="assets/img/oyo.png" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
-                <div><img src="assets/img/comfort.JPG" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
                 <div><img src="assets/img/bob.JPG" data-action="zoom" class="shadow rounded ae-8" alt="Image"/></div>
             </div>
         </div>
@@ -492,7 +564,7 @@ footer > div{
 </section>
 
 
-<!-- Slide 6 (#95) Events -->
+<!-- Slide 6 (#95) Teams -->
 <section class="slide fade-6 kenBurns" id="committee">
   <div class="content">
     <div class="container">
