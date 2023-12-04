@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- Custom Scripts -->
-	<!-- <script src="js/custom.js" type="text/javascript"></script> -->
+	<script src="js/index.js" type="text/javascript"></script>
 
 	<!-- Fonts and Material Icons -->
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
@@ -36,6 +36,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .events img{
   border-radius: 5px !important;
   width: 100%;
@@ -47,43 +48,77 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
+  /* height: 500px; */
+  align-items: stretch;
+  height: 500px;
   gap: 5px;
+  padding: 10px 0;
 }
 
 .events .event-cards > span{
   min-width: 270px;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+
+.events .event-cards::-webkit-scrollbar {
+  height: 5px;           /* width of the entire scrollbar */
+}
+
+.events .event-cards::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+.events .event-cards::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.586);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: transparent;  /* creates padding around scroll thumb */
+}
+
+.truncate-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 
 
 #popup-container {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      z-index: 1;
-    }
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+  color: black;
+  border-radius: 5px;
+  width: 85%;
+}
 
-    #overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}
 
-    #close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-    }
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
 
 #sponsors .all-sponsors{
     display: grid;
@@ -202,6 +237,8 @@
   flex-wrap: wrap;
 }
 
+
+
 @media (max-width: 720px) {
  
   #sponsors .all-sponsors {
@@ -220,9 +257,10 @@
 
 }
 footer > div{
-  background-color: rgba(0, 0, 0, 0.416);
+  background-color: rgba(0, 0, 0, 0.581);
   display: flex !important;
   flex-wrap: wrap !important;
+  gap: 5px;
   width: 100% !important;
   align-items: center !important;
   justify-content: space-between !important;
@@ -380,14 +418,15 @@ footer > div{
           <div class="fix-3-12">
             <img src="./assets/img/logo/logo.png" alt="">
           </div>
-          <div class="button play small white popupTrigger ae-2 fromCenter margin-top-6 margin-bottom-6" data-popup-id="9">
+          <!-- <div class="button play small white popupTrigger ae-2 fromCenter margin-top-6 margin-bottom-6" data-popup-id="9">
             <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use></svg>
-          </div>
+          </div> -->
           <p class="ae-3"><span class="opacity-8"><strong>10th and 11th January</strong></span></p>
+          <div class="margin-top-20 margin-bottom-1"></div>
           <div class="reg-links ">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" class="button blue gradient crop ae-3">CC Registration</a>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" class="button blue gradient crop ae-3">International Summit Registration</a>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" class="button blue gradient crop ae-3">NCP Registration</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" style="background-color: #ac6afc;" class="button gradient crop ae-3">CC Registration</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" style="background-color: #ac6afc;" class="button gradient crop ae-3">International Summit Registration</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" style="background-color: #ac6afc;" class="button gradient crop ae-3">NCP Registration</a>
           </div>
         </div>
 
@@ -440,11 +479,11 @@ footer > div{
 <!-- Slide 5 Events (#85) -->
 <section class="slide fade-6 kenBurns events" id="events">
 
-  
+  <div id="overlay"></div>
   <div id="popup-container">
-    <span id="close-btn" onclick="closePopup()">&times;</span>
-    <h2>Popup Content</h2>
-    <p>This is a simple popup.</p>
+    <span id="close-btn" onclick="closePopup()"><i class="fa fa-close"></i></span>
+    <h2 id="popup_title"></h2>
+    <p id="popup_desc">Loading...</p>
   </div>
 
   <div class="content">
@@ -455,26 +494,26 @@ footer > div{
           <h1 class="ae-1">Events</h1>
           <div class="event-cards">
 
-            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
-              <div class="pad" style="background: #F5FBFE">
-                <h3>Musical Evening</h3>
+            <span onclick="openPopup(this)" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+              <div class="pad">
+                <h3 class="title">Musical Evening</h3>
                 <img src="./assets/img/musical.png" alt="">
                 <div class="margin-top-3 margin-bottom-3 equalElement ae-6" style="height:auto !important">
                   <ul class="p tiny">
-                    <li class="opacity-8">
+                    <li class="opacity-8 truncate-lines description">
                       Scintillating, exhilarating and rejuvenating, Finanza’s musical evenings promise the most memorable experience with live performances by celebrated artists and the coolest songs to vibe to!
                     </li>
                   </ul>
                 </div>
               </div>
             </span>
-            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
-              <div class="pad" style="background: #F5FBFE">
-                <h3>Social Cause</h3>
+            <span onclick="openPopup(this)" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+              <div class="pad">
+                <h3 class="title">Social Cause</h3>
                 <img src="./assets/img/social.jpeg" alt="">
                 <div class="margin-top-3 margin-bottom-3 equalElement ae-6" style="height:auto !important">
                   <ul class="p tiny">
-                    <li class="opacity-8">
+                    <li class="opacity-8 truncate-lines description">
                       Our engagement with social causes is a small way of giving back to the society that gave us so much. Team Finanza strives to steer revolution in its own little way and create a fundamental difference in the assumption of its duty. With responsibility, kindness, conscientiousness and compassion, we pledge to create an impact, one cause at a time.
                     </li>
                   </ul>
@@ -482,37 +521,37 @@ footer > div{
               </div>
             </span>
 
-            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
-              <div class="pad" style="background: #F5FBFE">
-                <h3>Mock Stock<br>(Finanza Markets)</h3>
+            <span onclick="openPopup(this)" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+              <div class="pad">
+                <h3 class="title">Mock Stock<br>(Finanza Markets)</h3>
                 <img src="./assets/img/stock.png" alt="">
                 <div class="margin-top-3 margin-bottom-3 equalElement ae-6">
                   <ul class="p tiny">
-                    <li class="opacity-8">
+                    <li class="opacity-8 truncate-lines description">
                       The Mock Stock is Finanza’s virtual simulation of the stock exchange amalgamating its major aspects to provide a real-world experience to all of its participants. one cause at a time.
                     </li>
                   </ul>
                 </div>
               </div>
             </span>
-            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
-              <div class="pad" style="background: #F5FBFE">
-                <h3>Fables with Finanza<br>(Talk Show)</h3>
+            <span onclick="openPopup(this)" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+              <div class="pad">
+                <h3 class="title">Fables with Finanza<br>(Talk Show)</h3>
                 <img src="./assets/img/vishalbhai.jpg" alt="">
                 <div class="margin-top-3 margin-bottom-3 equalElement ae-6" style="height:auto !important">
                   <ul class="p tiny">
-                    <li class="opacity-8">‘Fables with Finanza’ is Finanza’s very own talk-show that digitally connects with a stellar line-up of prominent personalities from all over the world to enrich the audience with their knowledge and understanding and start finance-related conversations and discussions.</li>
+                    <li class="opacity-8 truncate-lines description">‘Fables with Finanza’ is Finanza’s very own talk-show that digitally connects with a stellar line-up of prominent personalities from all over the world to enrich the audience with their knowledge and understanding and start finance-related conversations and discussions.</li>
                   </ul>
                 </div>
               </div>
             </span>
-            <span onclick="openPopup()" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
-              <div class="pad" style="background: #F5FBFE">
-                <h3>Financial and Entrepreneurial Summits</h3>
+            <span onclick="openPopup(this)" class="col-4-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
+              <div class="pad">
+                <h3 class="title">Financial and Entrepreneurial Summits</h3>
                 <img src="./assets/img/summit.png" alt="">
                 <div class="margin-top-3 margin-bottom-3 equalElement ae-6" style="height:auto !important">
                   <ul class="p tiny">
-                    <li class="opacity-8">
+                    <li class="opacity-8 truncate-lines description">
                       Year after year, Team Finanza extends its invitation to a host of illustrious panelists from a gamut of experienced industry professionals, path-breaking entrepreneurs and iconic celebrities that share valuable insights and inspiring stories.
                     </li>
                   </ul>
@@ -800,11 +839,21 @@ footer > div{
                   <p class="tiny opacity-6"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailtopublicrelations.mithibaifinanza@gmail.com">publicrelations.mithibaifinanza@gmail.com</a></p>
                 </li>
                 <li class="col-6-12 ae-5">
-                  <h3 class="margin-top-3">Krina Maniar</h3>
+                  <h3 class="margin-top-3">
+                    Krina Maniar 
+                    <span style="font-size: 12px;">
+                      (HoD Marketing)
+                    </span>
+                </h3>
                   <p class="tiny opacity-6"><i class="fa fa-phone"></i>&nbsp;&nbsp;<a href="tel:+919004328334">+91 90043 28334</a></p>
                 </li>
                 <li class="col-6-12 ae-6">
-                  <h3 class="margin-top-3">Simran</h3>
+                  <h3 class="margin-top-3">
+                    Simran Wagh                      
+                    <span style="font-size: 12px;">
+                      (HoD Public Relations)
+                    </span>
+                  </h3>
                   <p class="tiny opacity-6"><i class="fa fa-phone"></i>&nbsp;&nbsp;<a href="tel:+919004754262">+91 90047 54262</a></p>
                 </li>
               </ul>
@@ -850,7 +899,7 @@ footer > div{
       <div>        
       </div>
       <div class="right-footer">
-        <span>Designed By <a href="https://rishabhnahar.onrender.com/" target="_blank"> Rishabh Nahar</a></span>
+        <span>Designed By <a style="color: #ac6afc;" href="https://rishabhnahar.onrender.com/" target="_blank"> Rishabh Nahar</a></span>
     </div>
   </div>
 </footer>
