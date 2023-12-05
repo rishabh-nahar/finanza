@@ -193,8 +193,8 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 20px;
-  min-height: 200px;
+  gap: 5px;
+  min-height: 220px;
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 10px;
@@ -204,14 +204,14 @@
   border-radius: 5px;
   align-self: stretch;
   width: 20vw;
-  min-width: 200px;
+  min-width: 240px;
   /* width: clamp(350px, 20vw, 580px); */
 }
 
 #committee .core-comm img{
   object-fit: cover;
-  height: 150px;
-  width: 200px;
+  height: 170px !important;
+  width: 170px !important;
   border-radius: 50%;
 }
 
@@ -223,11 +223,32 @@
   align-items: center;
 }
 #committee .hods{
-  background-color: rgba(14, 14, 14, 0.273);
-  color: rgba(255, 255, 255, 0.817);
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.817);
   border-radius: 5px;
   padding: 20px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#committee .hods h5{
+  font-size: 13px;
+  margin: 10px 0;
+}
+#committee .hods .hod-image-container{
+    height: 80px;
+    width: 80px;
+}
+#committee .hods .member-names{
+  font-size: 12px;
+  font-weight: 500;
+}
+#committee .hods .hod-image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 .reg-links{
   display: flex;
@@ -675,32 +696,44 @@ footer > div{
             <div class="hod-containers">
   
               <div class="hods">
-                <h3>Public Relations</h3>
-                <ul>
+                <div class="hod-image-container">
+                  <img src="./assets/img/teams/team1.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Public Relations</h5>
+                <ul class="member-names">
                   <li>Pal Shah</li>
                   <li>Simran Wagh</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Digital Media</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team2.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Digital Media</h5>
+                <ul class="member-names">
                   <li>Kartik Shah</li>
                   <li>Hiti Padia</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Graphics</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team3.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Graphics</h5>
+                <ul class="member-names">
                   <li>Archi Dhakan</li>
                   <li>Aditi Gupta</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>creatives</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team4.jpg" alt="" class="hod-image">
+                </div>
+                <h5>creatives</h5>
+                <ul class="member-names">
                   <li></li>
                   <li></li>
                 </ul>
@@ -708,32 +741,44 @@ footer > div{
   
   
               <div class="hods">
-                <h3>Talent Management</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team5.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Talent Management</h5>
+                <ul class="member-names">
                   <li>Aashi Verma</li>
                   <li>Bhaavika Ahuja</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Special Projects</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team6.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Special Projects</h5>
+                <ul class="member-names">
                   <li>Nihaal Vira</li>
                   <li></li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Financial Events</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team7.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Financial Events</h5>
+                <ul class="member-names">
                   <li>Gautam Mehta</li>
                   <li>Harsh Shah</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Marketing </h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team8.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Marketing </h5>
+                <ul class="member-names">
                   <li>Krina Maniar</li>
                   <li>Nehanshi Nagda</li>
                 </ul>
@@ -742,64 +787,88 @@ footer > div{
   
               
               <div class="hods">
-                <h3>Informals</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team1.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Informals</h5>
+                <ul class="member-names">
                   <li>Manasvi Saxena</li>
                   <li>Purva Agrawal </li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Business and Mgmt Events</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team2.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Business and Mgmt Events</h5>
+                <ul class="member-names">
                   <li>Krishna Rawat</li>
                   <li>Gaurij Choudhari</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Security </h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team3.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Security </h5>
+                <ul class="member-names">
                   <li>Drishti Thakkar</li>
                   <li>Prateek</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Finance</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team4.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Finance</h5>
+                <ul class="member-names">
                   <li>Gaurav Saboo</li>
                 </ul>
               </div>
   
               
               <div class="hods">
-                <h3>Productions</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team5.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Productions</h5>
+                <ul class="member-names">
                   <li>Mahat Mehta</li>
                   <li>Siddhant Agrawal</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Hospitality </h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team6.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Hospitality </h5>
+                <ul class="member-names">
                   <li>Soumit Desai</li>
                   <li>Vaacha Shah</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Logistics</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team7.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Logistics</h5>
+                <ul class="member-names">
                   <li>Deep Shah</li>
                   <li>Bhavesh Dalmiya</li>
                 </ul>
               </div>
   
               <div class="hods">
-                <h3>Printing and Stationary</h3>
-                <ul>
+                 <div class="hod-image-container">
+                  <img src="./assets/img/teams/team8.jpg" alt="" class="hod-image">
+                </div>
+                <h5>Printing and Stationary</h5>
+                <ul class="member-names">
                   <li>Raadhey Lalpuria</li>
                   <li>Simran Wagh</li>
                 </ul>
@@ -835,7 +904,7 @@ footer > div{
               <div class="ae-3"><p class="opacity-8">For any questions or concerns, please don't hesitate to contact us – we're here to help!</p></div>
               <ul class="flex">
                 <li class="col-12-12 ae-3">
-                  <h3 class="margin-top-3">Mail us at</h3>
+                  <h5 class="margin-top-3">Mail us at</h3>
                   <p class="tiny opacity-6"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailtopublicrelations.mithibaifinanza@gmail.com">publicrelations.mithibaifinanza@gmail.com</a></p>
                 </li>
                 <li class="col-6-12 ae-5">
