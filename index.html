@@ -29,12 +29,62 @@
   <link rel="icon" href="./assets/img/logo/logo_icon.png" type="image/png" sizes="16x16">
  
 <style>
+.cta {
+ position: relative;
+ margin: auto;
+ padding: 15px 18px;
+ transition: all 0.2s ease;
+ border: none;
+ background: none;
+ cursor: pointer;
+}
 
-#main_home{
-  height: 100vh;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+.cta:before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ display: block;
+ border-radius: 50px;
+ background: #ac6afc;
+ width: 45px;
+ height: 45px;
+ transition: all 0.3s ease;
+}
+
+.cta span {
+ position: relative;
+ font-family: "Ubuntu", sans-serif;
+ font-size: 15px;
+ font-weight: 600;
+ letter-spacing: 0.05em;
+ color: #ffffff;
+}
+
+.cta svg {
+ position: relative;
+ top: 0;
+ margin-left: 10px;
+ fill: none;
+ stroke-linecap: round;
+ stroke-linejoin: round;
+ stroke: #ffffff;
+ stroke-width: 2;
+ transform: translateX(-5px);
+ transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+ width: 100%;
+ background: #ac6afcb4;
+}
+
+.cta:hover svg {
+ transform: translateX(0);
+}
+
+.cta:active {
+ transform: scale(0.95);
 }
 
 .events img{
@@ -256,6 +306,7 @@
   align-items: baseline;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 
@@ -268,8 +319,17 @@
   #committee .hod-containers{
     grid-template-columns: 50% 50%;
   }
+  .reg-links{
+    justify-content: left;
+  }
   .reg-links a{
     width: 100%;
+    text-align: left;
+    font-size: 5px !important;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    /* width: 100%; */
   }
 }
 .panel.bottom{
@@ -444,10 +504,40 @@ footer > div{
           </div> -->
           <p class="ae-3"><span class="opacity-8"><strong>10th and 11th January</strong></span></p>
           <div class="margin-top-20 margin-bottom-1"></div>
-          <div class="reg-links ">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" style="background-color: #ac6afc;" class="button gradient crop ae-3">CC Registration</a>
+          <div class="reg-links">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform">
+
+                <button class="cta">
+                  <span>CC Registration</span>
+                  <svg viewBox="0 0 13 10" height="10px" width="15px">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </button>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform">
+              <button class="cta">
+                <span>International summit Registration</span>
+                <svg viewBox="0 0 13 10" height="10px" width="15px">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+          </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform">
+
+                <button class="cta">
+                  <span>NCP Registration</span>
+                  <svg viewBox="0 0 13 10" height="10px" width="15px">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </button>
+            </a>
+
+              <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" style="background-color: ;" class="button gradient crop ae-3">CC Registration</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" style="background-color: #ac6afc;" class="button gradient crop ae-3">International Summit Registration</a>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" style="background-color: #ac6afc;" class="button gradient crop ae-3">NCP Registration</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd51HT1yn-zfD89bGVUrN2kptMhrliZbStPR45Hw01cqp3lPQ/viewform" style="background-color: #ac6afc;" class="button gradient crop ae-3">NCP Registration</a> -->
           </div>
         </div>
 
